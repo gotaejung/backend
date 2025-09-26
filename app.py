@@ -12,7 +12,7 @@ import uuid
 # Flask 앱 생성
 app = Flask(__name__)
 # CORS 설정 - 프론트엔드에서 오는 요청 허용
-CORS(app, resources={r"/chat": {"origins": ["http://localhost:5000", "http://localhost:3000", "http://localhost:5173","https://frontend-nu-orcin-85.vercel.app/","https://frontend-9gbw9ojg2-taejungs-projects-6bb4a0bc.vercel.app"]}})
+CORS(app, resources={r"/chat": {"origins": ["http://localhost:5000", "http://localhost:3000", "http://localhost:5173","https://frontend-nu-orcin-85.vercel.app","https://frontend-9gbw9ojg2-taejungs-projects-6bb4a0bc.vercel.app"]}})
 
 # 환경변수에서 키 읽어오기
 CLOVA_INVOKE_URL = os.environ.get('CHATBOT_INVOKE_URL')
