@@ -143,7 +143,10 @@ if __name__ == '__main__':
     print("백엔드 서버를 시작합니다...")
     print(f"CLOVA API URL: {CLOVA_INVOKE_URL[:50] + '...' if CLOVA_INVOKE_URL else 'None'}")
     print(f"CLOVA SECRET KEY: {'설정됨' if CLOVA_SECRET_KEY else '설정되지 않음'}")
+
     #배포용
-    #port=int(os.environ.get('PORT',10000))
-    #app.run(debug=False, host='0.0.0.0', port=port)
-    app.run(debug=True, host='0.0.0.0', port=8000)
+    port=int(os.environ.get('PORT',10000))
+    app.run(debug=False, host='0.0.0.0', port=port)
+
+    #개발용
+    #app.run(debug=True, host='0.0.0.0', port=8000)
